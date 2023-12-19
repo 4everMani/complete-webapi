@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contracts;
+﻿using AutoMapper;
+using BusinessLogic.Contracts;
 using Contracts;
 
 namespace BusinessLogic.Services
@@ -9,10 +10,10 @@ namespace BusinessLogic.Services
 
         private readonly Lazy<IEmployeeService> _employeeService;
 
-        public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager)
+        public ServiceManager(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper)
         {
-            _companyService = new Lazy<ICompanyService>(() => new CompanyService(repositoryManager, loggerManager));
-            _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, loggerManager));
+            _companyService = new Lazy<ICompanyService>(() => new CompanyService(repositoryManager, loggerManager, mapper));
+            _employeeService = new Lazy<IEmployeeService>(() => new EmployeeService(repositoryManager, loggerManager, mapper));
         }
 
         public ICompanyService CompanyService => _companyService.Value;

@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contracts;
+﻿using AutoMapper;
+using BusinessLogic.Contracts;
 using Contracts;
 using Entities;
 using Shared.DataTransferObjects;
@@ -16,10 +17,13 @@ namespace BusinessLogic.Services
 
         private readonly ILoggerManager _loggerManager;
 
-        public CompanyService(IRepositoryManager repositoryManager, ILoggerManager loggerManager)
+        private readonly IMapper _mapper;
+
+        public CompanyService(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper)
         {
             _repositoryManager = repositoryManager;
             _loggerManager = loggerManager;
+            _mapper = mapper;
         }
 
         public IEnumerable<CompanyDto> GetAllCompanies(bool trackingChanges)
@@ -27,10 +31,7 @@ namespace BusinessLogic.Services
             try
             {
                 var companies = _repositoryManager.CompanyRepository.GetAllCompanies(trackingChanges);
-                var companiesDto = companies.Select(c => 
-                new CompanyDto(
-                    c.Id, c.Name ?? "", string.Join(' ',c.Address, c.Country))
-                ).ToList();
+                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
                 return companiesDto;
             }
             catch (Exception ex)
