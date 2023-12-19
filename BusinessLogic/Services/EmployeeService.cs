@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contracts;
+﻿using AutoMapper;
+using BusinessLogic.Contracts;
 using Contracts;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,13 @@ namespace BusinessLogic.Services
 
         private readonly ILoggerManager _loggerManager;
 
-        public EmployeeService(IRepositoryManager repositoryManager, ILoggerManager loggerManager)
+        private readonly IMapper _mapper;
+
+        public EmployeeService(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper )
         {
             _repositoryManager = repositoryManager;
             _loggerManager = loggerManager;
+            _mapper = mapper;
         }
     }
 }
