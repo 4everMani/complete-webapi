@@ -2,6 +2,7 @@
 using BusinessLogic.Contracts;
 using Contracts;
 using Entities;
+using Entities.Exceptions;
 using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
@@ -32,5 +33,14 @@ namespace BusinessLogic.Services
             var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
             return companiesDto;
         }
+
+        public CompanyDto GetCompany(Guid companyId, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+            return _mapper.Map<CompanyDto>(company);
+        }
+        
     }
 }
