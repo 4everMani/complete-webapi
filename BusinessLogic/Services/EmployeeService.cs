@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLogic.Contracts;
 using Contracts;
+using Entities;
+using Entities.Exceptions;
+using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +25,35 @@ namespace BusinessLogic.Services
             _repositoryManager = repositoryManager;
             _loggerManager = loggerManager;
             _mapper = mapper;
+        }
+
+        public EmployeeDto GetEmployee(Guid companyId, Guid employeeId, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+            {
+                throw new CompanyNotFoundException(companyId);
+            }
+
+            var employee = _repositoryManager.EmployeeRepository.GetEmployee(companyId, employeeId, trackChanges);
+            if (employee is null)
+            {
+                throw new EmployeeNotFoundException(employeeId);
+            }
+            return _mapper.Map<EmployeeDto>(employee);
+        }
+
+        public IEnumerable<EmployeeDto> GetEmployees(Guid companyId, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+            {
+                throw new CompanyNotFoundException(companyId);
+            }
+
+            var employees = _repositoryManager.EmployeeRepository.GetEmployees(companyId, trackChanges);
+            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
+            return employeesDto;
         }
     }
 }
