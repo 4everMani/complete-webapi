@@ -28,17 +28,9 @@ namespace BusinessLogic.Services
 
         public IEnumerable<CompanyDto> GetAllCompanies(bool trackingChanges)
         {
-            try
-            {
-                var companies = _repositoryManager.CompanyRepository.GetAllCompanies(trackingChanges);
-                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
-                return companiesDto;
-            }
-            catch (Exception ex)
-            {
-                _loggerManager.LogError($"Something went wrong in the {nameof(GetAllCompanies)} service method {ex}");
-                throw;
-            }
+            var companies = _repositoryManager.CompanyRepository.GetAllCompanies(trackingChanges);
+            var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+            return companiesDto;
         }
     }
 }
