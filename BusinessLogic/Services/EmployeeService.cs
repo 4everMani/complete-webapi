@@ -29,18 +29,9 @@ namespace BusinessLogic.Services
 
         public EmployeeDto GetEmployee(Guid companyId, Guid employeeId, bool trackChanges)
         {
-            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
-            if (company is null)
-            {
-                throw new CompanyNotFoundException(companyId);
-            }
-
+            _ = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges) ?? throw new CompanyNotFoundException(companyId);
             var employee = _repositoryManager.EmployeeRepository.GetEmployee(companyId, employeeId, trackChanges);
-            if (employee is null)
-            {
-                throw new EmployeeNotFoundException(employeeId);
-            }
-            return _mapper.Map<EmployeeDto>(employee);
+            return employee is null ? throw new EmployeeNotFoundException(employeeId) : _mapper.Map<EmployeeDto>(employee);
         }
 
         public IEnumerable<EmployeeDto> GetEmployees(Guid companyId, bool trackChanges)
