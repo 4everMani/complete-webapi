@@ -12,6 +12,17 @@ namespace Repository
     {
         public EmployeeRepository(RepositoryContext repositoryContext)
             :base(repositoryContext) { }
-        
+
+        public Employee? GetEmployee(Guid companyId, Guid employeeId, bool trackChange) =>
+            FindByConditon(
+                e => e.CompanyId.Equals(companyId) && e.Id.Equals(employeeId),
+                trackChange)
+            .SingleOrDefault();
+
+        public IEnumerable<Employee> GetEmployees(Guid companyId, bool trackChange) =>
+            FindByConditon(e => e.CompanyId.Equals(companyId), trackChange)
+                .OrderBy(e => e.Name)
+                .ToList();
+
     }
 }

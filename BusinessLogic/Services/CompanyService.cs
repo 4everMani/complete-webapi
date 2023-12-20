@@ -2,6 +2,7 @@
 using BusinessLogic.Contracts;
 using Contracts;
 using Entities;
+using Entities.Exceptions;
 using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
@@ -28,17 +29,30 @@ namespace BusinessLogic.Services
 
         public IEnumerable<CompanyDto> GetAllCompanies(bool trackingChanges)
         {
-            try
-            {
-                var companies = _repositoryManager.CompanyRepository.GetAllCompanies(trackingChanges);
-                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
-                return companiesDto;
-            }
-            catch (Exception ex)
-            {
-                _loggerManager.LogError($"Something went wrong in the {nameof(GetAllCompanies)} service method {ex}");
-                throw;
-            }
+            var companies = _repositoryManager.CompanyRepository.GetAllCompanies(trackingChanges);
+            var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+            return companiesDto;
         }
+
+        public CompanyDto GetCompany(Guid companyId, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+            return _mapper.Map<CompanyDto>(company);
+        }
+
+        public CompanyDto CreateCompany(CompanyForCreationDto company)
+        {
+            var companyEntity = _mapper.Map<Company>(company);
+
+            _repositoryManager.CompanyRepository.CreateCompany(companyEntity);
+            _repositoryManager.Save();
+
+            var companyToReturn = _mapper.Map<CompanyDto>(companyEntity);
+
+            return companyToReturn;
+        }
+        
     }
 }

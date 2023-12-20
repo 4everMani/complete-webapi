@@ -11,5 +11,9 @@ namespace BusinessLogic.Contracts
     public interface ICompanyService
     {
         IEnumerable<CompanyDto> GetAllCompanies(bool trackingChanges);
+
+        CompanyDto GetCompany(Guid companyId, bool trackChanges);
+
+        CompanyDto CreateCompany(CompanyForCreationDto company);
     }
 }

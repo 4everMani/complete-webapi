@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Shared.DataTransferObjects;
 
 namespace Presentation.Controllers
 {
@@ -17,15 +18,27 @@ namespace Presentation.Controllers
         [HttpGet]
         public IActionResult GetCompanies()
         {
-            try
+            var companies = _serviceManager.CompanyService.GetAllCompanies(trackingChanges: false);
+            return Ok(companies);
+        }
+
+        [HttpGet("{id:guid}", Name = "CompanyById")]
+        public IActionResult GetCompany(Guid id)
+        {
+            var company = _serviceManager.CompanyService.GetCompany(id, false);
+            return Ok(company);
+        }
+
+        [HttpPost]
+        public IActionResult CreateCompany([FromBody] CompanyForCreationDto company)
+        {
+            if (company is null)
             {
-                var companies = _serviceManager.CompanyService.GetAllCompanies(trackingChanges: false);
-                return Ok(companies);
+                return BadRequest("Company object is null");
             }
-            catch (Exception ex)
-            {
-                return StatusCode(500, "Internal Server error");
-            }
+            var createdCompany = _serviceManager.CompanyService.CreateCompany(company);
+
+            return CreatedAtRoute("CompanyById", new { id = createdCompany.Id }, createdCompany);
         }
     }
 }
