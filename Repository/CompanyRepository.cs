@@ -8,6 +8,9 @@ namespace Repository
         public CompanyRepository(RepositoryContext repositoryContext)
             : base(repositoryContext) { }
 
+        public void CreateCompany(Company company) =>
+            Create(company);
+
         public IEnumerable<Company> GetAllCompanies(bool isTracking) =>
             FindAll(isTracking)
             .OrderBy(c => c.Name)

@@ -41,6 +41,18 @@ namespace BusinessLogic.Services
                 throw new CompanyNotFoundException(companyId);
             return _mapper.Map<CompanyDto>(company);
         }
+
+        public CompanyDto CreateCompany(CompanyForCreationDto company)
+        {
+            var companyEntity = _mapper.Map<Company>(company);
+
+            _repositoryManager.CompanyRepository.CreateCompany(companyEntity);
+            _repositoryManager.Save();
+
+            var companyToReturn = _mapper.Map<CompanyDto>(companyEntity);
+
+            return companyToReturn;
+        }
         
     }
 }
