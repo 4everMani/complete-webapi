@@ -27,9 +27,24 @@ namespace BusinessLogic.Services
             _mapper = mapper;
         }
 
+        public EmployeeDto CreateEmployeeForCompany(Guid companyId, EmployeeForCreationDto employeeForCreation, bool trackChanges)
+        {
+            _ = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges) ?? 
+                throw new CompanyNotFoundException(companyId);
+
+            var employeeEntity = _mapper.Map<Employee>(employeeForCreation);
+
+            _repositoryManager.EmployeeRepository.CreateEmployeeForCompany(companyId, employeeEntity);
+            _repositoryManager.Save();
+
+            var entityToReturn = _mapper.Map<EmployeeDto>(employeeEntity);
+            return entityToReturn;
+        }
+
         public EmployeeDto GetEmployee(Guid companyId, Guid employeeId, bool trackChanges)
         {
-            _ = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges) ?? throw new CompanyNotFoundException(companyId);
+            _ = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges) ?? 
+                throw new CompanyNotFoundException(companyId);
             var employee = _repositoryManager.EmployeeRepository.GetEmployee(companyId, employeeId, trackChanges);
             return employee is null ? throw new EmployeeNotFoundException(employeeId) : _mapper.Map<EmployeeDto>(employee);
         }

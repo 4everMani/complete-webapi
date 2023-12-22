@@ -19,6 +19,10 @@ namespace Repository
         public Company? GetCompany(Guid companyId, bool trackChange) =>
             FindByConditon(c => c.Id.Equals(companyId), trackChange)
             .SingleOrDefault();
+
+        public IEnumerable<Company> GetByIds(IEnumerable<Guid> ids, bool trackChange) =>
+            FindByConditon(c => ids.Contains(c.Id), trackChange)
+            .ToList();
         
     }
 }

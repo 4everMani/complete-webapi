@@ -1,5 +1,7 @@
 ﻿using BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Presentation.ModelBinders;
 using Shared.DataTransferObjects;
 
 namespace Presentation.Controllers
@@ -39,6 +41,21 @@ namespace Presentation.Controllers
             var createdCompany = _serviceManager.CompanyService.CreateCompany(company);
 
             return CreatedAtRoute("CompanyById", new { id = createdCompany.Id }, createdCompany);
+        }
+
+        [HttpGet("collection/({ids})", Name = "CompanyCollection")]
+        public IActionResult GetCompanyCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))]IEnumerable<Guid> ids)
+        {
+            var companies = _serviceManager.CompanyService.GetByIds(ids, false);
+            return Ok(companies);
+        }
+
+        [HttpPost("collection")]
+        public IActionResult CreateCompanyCollection([FromBody] IEnumerable<CompanyForCreationDto> companyCollection)
+        {
+            var result = _serviceManager.CompanyService.CreateCompanyCollection(companyCollection);
+
+            return CreatedAtRoute("CompanyCollection", new { result.ids }, result.companies);
         }
     }
 }

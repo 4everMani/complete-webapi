@@ -4,11 +4,6 @@ using Contracts;
 using Entities;
 using Entities.Exceptions;
 using Shared.DataTransferObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
@@ -53,6 +48,36 @@ namespace BusinessLogic.Services
 
             return companyToReturn;
         }
-        
+
+        public IEnumerable<CompanyDto> GetByIds(IEnumerable<Guid> ids, bool trackChange)
+        {
+            if (ids is null)
+                throw new IdParametersbadRequestException();
+
+            var companyEntities = _repositoryManager.CompanyRepository.GetByIds(ids, trackChange);
+            if (ids.Count() != companyEntities.Count())
+                throw new CollectionIdsBadRequestException();
+
+            var comapinesToReturn = _mapper.Map<IEnumerable<CompanyDto>>(companyEntities);
+            return comapinesToReturn;
+        }
+
+        public (IEnumerable<CompanyDto> companies, string ids) CreateCompanyCollection(IEnumerable<CompanyForCreationDto> companyCollection)
+        {
+            if (companyCollection is null)
+                throw new CompanyCollectionBadRequest();
+
+            var companyEntities = _mapper.Map<IEnumerable<Company>>(companyCollection);
+            foreach ( var company in companyEntities)
+            {
+                _repositoryManager.CompanyRepository.CreateCompany(company);
+            }
+            _repositoryManager.Save();
+
+            var companiesToRetuen = _mapper.Map<IEnumerable<CompanyDto>>(companyEntities);
+            var ids = string.Join(",", companiesToRetuen.Select(c => c.Id));
+            return (companies: companiesToRetuen, ids: ids);
+        }
+
     }
 }

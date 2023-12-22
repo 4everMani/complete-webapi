@@ -12,5 +12,7 @@ namespace BusinessLogic.Contracts
         IEnumerable<EmployeeDto> GetEmployees(Guid companyId, bool trackChanges);
 
         EmployeeDto GetEmployee(Guid companyId, Guid employeeId, bool trackChanges);
+
+        EmployeeDto CreateEmployeeForCompany(Guid companyId, EmployeeForCreationDto company, bool trackChanges);
     }
 }
