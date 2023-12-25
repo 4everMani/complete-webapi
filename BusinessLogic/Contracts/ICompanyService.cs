@@ -1,10 +1,4 @@
-﻿using Entities;
-using Shared.DataTransferObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shared.DataTransferObjects;
 
 namespace BusinessLogic.Contracts
 {
@@ -19,5 +13,7 @@ namespace BusinessLogic.Contracts
         IEnumerable<CompanyDto> GetByIds(IEnumerable<Guid> companyIds, bool trackChange);
 
         (IEnumerable<CompanyDto> companies, string ids) CreateCompanyCollection(IEnumerable<CompanyForCreationDto> companyCollection);
+
+        void DeleteCompany(Guid companyId, bool trackChange);
     }
 }

@@ -61,5 +61,19 @@ namespace BusinessLogic.Services
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
             return employeesDto;
         }
+
+        public void DeleteEmployeeForCompany(Guid companyId, Guid id, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+
+            var employeeForCompany = _repositoryManager.EmployeeRepository.GetEmployee(companyId, id, trackChanges);
+            if (employeeForCompany is null)
+                throw new EmployeeNotFoundException(id);
+
+            _repositoryManager.EmployeeRepository.DeleteEmployee(employeeForCompany);
+            _repositoryManager.Save();
+        }
     }
 }

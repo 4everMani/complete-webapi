@@ -79,5 +79,14 @@ namespace BusinessLogic.Services
             return (companies: companiesToRetuen, ids: ids);
         }
 
+        public void DeleteCompany(Guid companyId, bool trackChanges)
+        {
+            var company = _repositoryManager.CompanyRepository.GetCompany(companyId, trackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+            _repositoryManager.CompanyRepository.DeleteCompany(company);
+            _repositoryManager.Save();
+        }
+
     }
 }

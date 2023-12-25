@@ -30,5 +30,8 @@ namespace Repository
                 .OrderBy(e => e.Name)
                 .ToList();
 
+        public void DeleteEmployee(Employee employee) =>
+            Delete(employee);
+
     }
 }
