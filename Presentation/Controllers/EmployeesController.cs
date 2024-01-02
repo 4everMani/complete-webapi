@@ -1,12 +1,6 @@
 ﻿using BusinessLogic.Contracts;
-using BusinessLogic.Services;
 using Microsoft.AspNetCore.Mvc;
 using Shared.DataTransferObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Presentation.Controllers
 {
@@ -48,7 +42,7 @@ namespace Presentation.Controllers
         }
 
         [HttpDelete("{id:guid}")]
-        public IActionResult DeleteEmployeeForCompany(Guid companyId, Guid id) 
+        public IActionResult DeleteEmployeeForCompany(Guid companyId, Guid id)
         {
             _service.EmployeeService.DeleteEmployeeForCompany(companyId, id, false);
             return NoContent();
