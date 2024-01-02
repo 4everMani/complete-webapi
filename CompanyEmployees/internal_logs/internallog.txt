@@ -17644,3 +17644,229 @@
 2023-12-25 21:54:07.8925 Debug Targets not configured for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
 2023-12-25 21:54:07.8925 Debug Targets not configured for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
 2023-12-25 21:54:07.9767 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2024-01-02 20:30:54.3915 Debug Message Template Auto Format enabled
+2024-01-02 20:30:54.4338 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.7.2287. Product version: 5.2.7+a1ef7cd83b5a6a172142a6850f0ced4e759a4b3b. GlobalAssemblyCache: False
+2024-01-02 20:30:54.4338 Debug Start watching file-filter 'NLog.config' in directory: E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0
+2024-01-02 20:30:54.4338 Debug --- NLog configuration dump ---
+2024-01-02 20:30:54.4338 Debug Targets:
+2024-01-02 20:30:54.4338 Debug Rules:
+2024-01-02 20:30:54.4338 Debug --- End of NLog configuration dump ---
+2024-01-02 20:30:54.4469 Trace FindReachableObject<System.Object>:
+2024-01-02 20:30:54.4469 Info Validating config: Targets=0, ConfigItems=0, FilePath=E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0\NLog.config
+2024-01-02 20:30:54.4469 Info Configuration initialized.
+2024-01-02 20:30:54.4469 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2024-01-02 20:30:54.4618 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2024-01-02 20:30:54.4618 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2024-01-02 20:30:54.4618 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Quic
+2024-01-02 20:30:54.4618 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2024-01-02 20:30:54.4618 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2024-01-02 20:30:54.4913 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2024-01-02 20:30:54.4932 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel
+2024-01-02 20:30:54.4932 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2024-01-02 20:30:54.4932 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2024-01-02 20:30:54.4932 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2024-01-02 20:30:54.4932 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2024-01-02 20:30:54.5243 Debug Targets not configured for Logger: CompanyEmployees
+2024-01-02 20:30:54.6450 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2024-01-02 20:30:55.4792 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2024-01-02 20:30:55.5328 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2024-01-02 20:30:55.5398 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2024-01-02 20:30:55.5398 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2024-01-02 20:30:55.5398 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2024-01-02 20:30:55.7017 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2024-01-02 20:30:55.7754 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2024-01-02 20:30:55.7754 Debug Targets not configured for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2024-01-02 20:30:55.7919 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2024-01-02 20:30:55.7919 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2024-01-02 20:30:55.8296 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware
+2024-01-02 20:30:55.8296 Debug Targets not configured for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2024-01-02 20:30:55.8296 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2024-01-02 20:30:55.8296 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware
+2024-01-02 20:30:55.8392 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2024-01-02 20:30:55.8392 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2024-01-02 20:30:55.8392 Debug Targets not configured for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2024-01-02 20:30:55.8682 Debug Targets not configured for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2024-01-02 20:30:55.9868 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2024-01-02 20:31:04.6349 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2024-01-02 20:31:04.6653 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2024-01-02 20:31:04.6908 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2024-01-02 20:31:05.3142 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2024-01-02 20:31:05.6343 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2024-01-02 20:31:05.6343 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2024-01-02 20:31:05.6492 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Query
+2024-01-02 20:31:05.6492 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2024-01-02 20:31:05.6492 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2024-01-02 20:31:05.7125 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model
+2024-01-02 20:31:05.7125 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2024-01-02 20:31:06.4691 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Update
+2024-01-02 20:31:08.3779 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2024-01-02 20:31:08.3779 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2024-01-02 20:32:52.2100 Debug Targets not configured for Logger: LoggerService.LoggerManager
+2024-01-02 20:37:00.9217 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder
+2024-01-02 20:40:13.3051 Debug Message Template Auto Format enabled
+2024-01-02 20:40:13.3513 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.7.2287. Product version: 5.2.7+a1ef7cd83b5a6a172142a6850f0ced4e759a4b3b. GlobalAssemblyCache: False
+2024-01-02 20:40:13.3669 Debug Start watching file-filter 'NLog.config' in directory: E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0
+2024-01-02 20:40:13.3680 Debug --- NLog configuration dump ---
+2024-01-02 20:40:13.3680 Debug Targets:
+2024-01-02 20:40:13.3680 Debug Rules:
+2024-01-02 20:40:13.3680 Debug --- End of NLog configuration dump ---
+2024-01-02 20:40:13.3680 Trace FindReachableObject<System.Object>:
+2024-01-02 20:40:13.3680 Info Validating config: Targets=0, ConfigItems=0, FilePath=E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0\NLog.config
+2024-01-02 20:40:13.3855 Info Configuration initialized.
+2024-01-02 20:40:13.3855 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2024-01-02 20:40:13.3987 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2024-01-02 20:40:13.3987 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2024-01-02 20:40:13.3987 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Quic
+2024-01-02 20:40:13.3987 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2024-01-02 20:40:13.3987 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2024-01-02 20:40:13.4253 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2024-01-02 20:40:13.4253 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel
+2024-01-02 20:40:13.4326 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2024-01-02 20:40:13.4326 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2024-01-02 20:40:13.4326 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2024-01-02 20:40:13.4326 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2024-01-02 20:40:13.4568 Debug Targets not configured for Logger: CompanyEmployees
+2024-01-02 20:40:13.5541 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2024-01-02 20:40:13.7722 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2024-01-02 20:40:13.8162 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2024-01-02 20:40:13.8240 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2024-01-02 20:40:13.8240 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2024-01-02 20:40:13.8240 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2024-01-02 20:40:13.9336 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2024-01-02 20:40:13.9830 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2024-01-02 20:40:13.9830 Debug Targets not configured for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2024-01-02 20:40:13.9967 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2024-01-02 20:40:13.9967 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2024-01-02 20:40:14.0239 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware
+2024-01-02 20:40:14.0239 Debug Targets not configured for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2024-01-02 20:40:14.0239 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2024-01-02 20:40:14.0239 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware
+2024-01-02 20:40:14.0239 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2024-01-02 20:40:14.0412 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2024-01-02 20:40:14.0412 Debug Targets not configured for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2024-01-02 20:40:14.0412 Debug Targets not configured for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2024-01-02 20:40:14.1441 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2024-01-02 20:40:16.5952 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2024-01-02 20:40:16.6075 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2024-01-02 20:40:16.6193 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2024-01-02 20:40:16.6193 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder
+2024-01-02 20:40:16.7471 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2024-01-02 20:40:55.5135 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2024-01-02 20:40:55.5135 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2024-01-02 20:42:51.3247 Debug Message Template Auto Format enabled
+2024-01-02 20:42:51.3563 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.7.2287. Product version: 5.2.7+a1ef7cd83b5a6a172142a6850f0ced4e759a4b3b. GlobalAssemblyCache: False
+2024-01-02 20:42:51.3563 Debug Start watching file-filter 'NLog.config' in directory: E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0
+2024-01-02 20:42:51.3563 Debug --- NLog configuration dump ---
+2024-01-02 20:42:51.3563 Debug Targets:
+2024-01-02 20:42:51.3563 Debug Rules:
+2024-01-02 20:42:51.3563 Debug --- End of NLog configuration dump ---
+2024-01-02 20:42:51.3692 Trace FindReachableObject<System.Object>:
+2024-01-02 20:42:51.3692 Info Validating config: Targets=0, ConfigItems=0, FilePath=E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0\NLog.config
+2024-01-02 20:42:51.3692 Info Configuration initialized.
+2024-01-02 20:42:51.3692 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2024-01-02 20:42:51.3839 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2024-01-02 20:42:51.3839 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2024-01-02 20:42:51.3839 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Quic
+2024-01-02 20:42:51.3839 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2024-01-02 20:42:51.3839 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2024-01-02 20:42:51.4078 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2024-01-02 20:42:51.4346 Debug Targets not configured for Logger: CompanyEmployees
+2024-01-02 20:42:51.5289 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2024-01-02 20:42:51.7496 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2024-01-02 20:42:51.7836 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2024-01-02 20:42:51.7836 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2024-01-02 20:42:51.7924 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2024-01-02 20:42:51.7924 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2024-01-02 20:42:51.8910 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2024-01-02 20:42:51.9421 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2024-01-02 20:42:51.9421 Debug Targets not configured for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2024-01-02 20:42:51.9659 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2024-01-02 20:42:51.9659 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2024-01-02 20:42:51.9931 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware
+2024-01-02 20:42:51.9931 Debug Targets not configured for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2024-01-02 20:42:51.9931 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2024-01-02 20:42:51.9931 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware
+2024-01-02 20:42:51.9931 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2024-01-02 20:42:52.0096 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2024-01-02 20:42:52.0096 Debug Targets not configured for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2024-01-02 20:42:52.0246 Debug Targets not configured for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2024-01-02 20:42:52.1178 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2024-01-02 20:43:19.5853 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2024-01-02 20:43:19.6090 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2024-01-02 20:43:19.6353 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2024-01-02 20:43:19.6353 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder
+2024-01-02 20:43:19.8618 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2024-01-02 20:43:31.0983 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2024-01-02 20:43:31.0983 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2024-01-02 20:46:07.9236 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2024-01-02 20:46:07.9345 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2024-01-02 20:46:07.9345 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Query
+2024-01-02 20:46:07.9345 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2024-01-02 20:46:07.9345 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2024-01-02 20:46:08.0032 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model
+2024-01-02 20:46:08.0032 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2024-01-02 20:46:09.0344 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Update
+2024-01-02 20:47:45.4669 Debug Message Template Auto Format enabled
+2024-01-02 20:47:45.4979 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.7.2287. Product version: 5.2.7+a1ef7cd83b5a6a172142a6850f0ced4e759a4b3b. GlobalAssemblyCache: False
+2024-01-02 20:47:45.5087 Debug Start watching file-filter 'NLog.config' in directory: E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0
+2024-01-02 20:47:45.5087 Debug --- NLog configuration dump ---
+2024-01-02 20:47:45.5087 Debug Targets:
+2024-01-02 20:47:45.5087 Debug Rules:
+2024-01-02 20:47:45.5087 Debug --- End of NLog configuration dump ---
+2024-01-02 20:47:45.5087 Trace FindReachableObject<System.Object>:
+2024-01-02 20:47:45.5087 Info Validating config: Targets=0, ConfigItems=0, FilePath=E:\Webapi\CompanyEmployees\CompanyEmployees\bin\Debug\net8.0\NLog.config
+2024-01-02 20:47:45.5087 Info Configuration initialized.
+2024-01-02 20:47:45.5087 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2024-01-02 20:47:45.5309 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2024-01-02 20:47:45.5309 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2024-01-02 20:47:45.5309 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Quic
+2024-01-02 20:47:45.5309 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2024-01-02 20:47:45.5309 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2024-01-02 20:47:45.5469 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2024-01-02 20:47:45.5648 Debug Targets not configured for Logger: CompanyEmployees
+2024-01-02 20:47:45.6302 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2024-01-02 20:47:45.8740 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2024-01-02 20:47:45.9111 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2024-01-02 20:47:45.9143 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2024-01-02 20:47:45.9143 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2024-01-02 20:47:45.9143 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2024-01-02 20:47:46.0071 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2024-01-02 20:47:46.0544 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2024-01-02 20:47:46.0554 Debug Targets not configured for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2024-01-02 20:47:46.0554 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2024-01-02 20:47:46.0554 Debug Targets not configured for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2024-01-02 20:47:46.0915 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware
+2024-01-02 20:47:46.0915 Debug Targets not configured for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2024-01-02 20:47:46.0915 Debug Targets not configured for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2024-01-02 20:47:46.0915 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware
+2024-01-02 20:47:46.0915 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2024-01-02 20:47:46.1057 Debug Targets not configured for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2024-01-02 20:47:46.1057 Debug Targets not configured for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2024-01-02 20:47:46.1176 Debug Targets not configured for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2024-01-02 20:47:46.2019 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2024-01-02 20:48:00.6904 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2024-01-02 20:48:00.7204 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2024-01-02 20:48:00.7465 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2024-01-02 20:48:00.7465 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder
+2024-01-02 20:48:00.9345 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2024-01-02 20:48:04.6957 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2024-01-02 20:48:04.6957 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2024-01-02 20:48:04.6957 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Query
+2024-01-02 20:48:04.6957 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2024-01-02 20:48:04.6957 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2024-01-02 20:48:04.7719 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model
+2024-01-02 20:48:04.7719 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2024-01-02 20:48:05.6859 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Update
+2024-01-02 20:48:43.3890 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.StatusCodeResult
+2024-01-02 20:48:52.6095 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2024-01-02 20:48:52.6095 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor

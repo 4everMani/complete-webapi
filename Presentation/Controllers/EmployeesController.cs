@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Contracts;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Shared.DataTransferObjects;
 
@@ -52,6 +53,19 @@ namespace Presentation.Controllers
         public IActionResult UpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] EmployeeForUpdateDto employeeForUpdate)
         {
             _service.EmployeeService.UpdateEmployeeForCompany(companyId, employeeForUpdate, id, false, true);
+            return NoContent();
+        }
+
+        [HttpPatch("{id:guid}")]
+        public IActionResult PartiallyUpdateEmployeeForCompany(Guid companyId, Guid id,
+            [FromBody] JsonPatchDocument<EmployeeForUpdateDto> patchDocument)
+        {
+            if (patchDocument is null)
+                return BadRequest("patchDocument object sent from client is null");
+
+            var result = _service.EmployeeService.GetEmployeeForPatch(companyId, id, comTrackChange: false, empTrackChanges: true);
+            patchDocument.ApplyTo(result.employeeToPatch);
+            _service.EmployeeService.SaveChangesForPatch(result.employeeToPatch, result.employeeEntity);
             return NoContent();
         }
     }

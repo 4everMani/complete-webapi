@@ -1,4 +1,5 @@
-﻿using Shared.DataTransferObjects;
+﻿using Entities;
+using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,9 @@ namespace BusinessLogic.Contracts
         void DeleteEmployeeForCompany(Guid companyId, Guid id, bool trackChanges);
 
         void UpdateEmployeeForCompany(Guid companyId, EmployeeForUpdateDto employeeForUpdate, Guid id, bool compTrackChange, bool empTrackChanges);
+
+        (EmployeeForUpdateDto employeeToPatch, Employee employeeEntity) GetEmployeeForPatch(Guid companyId, Guid id, bool comTrackChange, bool empTrackChanges);
+
+        void SaveChangesForPatch(EmployeeForUpdateDto employeeToPatch, Employee employeeEntity);
     }
 }
