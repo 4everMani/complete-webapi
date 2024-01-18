@@ -19,6 +19,7 @@ namespace CompanyEmployees.Extensions
                     builder.AllowAnyOrigin();
                     builder.AllowAnyHeader();
                     builder.AllowAnyMethod();
+                    builder.WithExposedHeaders("X-Pagination");
                     //builder.WithOrigins("https://example.com", "https://www.google.com");
                     //builder.WithHeaders("accept", "content-type");
                     //builder.WithMethods("POST", "GET");

@@ -4,6 +4,7 @@ using Contracts;
 using Entities;
 using Entities.Exceptions;
 using Shared.DataTransferObjects;
+using Shared.RequestFeatures;
 
 namespace BusinessLogic.Services
 {
@@ -44,7 +45,7 @@ namespace BusinessLogic.Services
             return employee is null ? throw new EmployeeNotFoundException(employeeId) : _mapper.Map<EmployeeDto>(employee);
         }
 
-        public async Task<IEnumerable<EmployeeDto>> GetEmployeesAsync(Guid companyId, bool trackChanges)
+        public async Task<(IEnumerable<EmployeeDto> employees, MetaData metaData)> GetEmployeesAsync(Guid companyId, EmployeeParameters employeeParameters, bool trackChanges)
         {
             var company = await _repositoryManager.CompanyRepository.GetCompanyAsync(companyId, trackChanges);
             if (company is null)
@@ -52,9 +53,9 @@ namespace BusinessLogic.Services
                 throw new CompanyNotFoundException(companyId);
             }
 
-            var employees = await _repositoryManager.EmployeeRepository.GetEmployeesAsync(companyId, trackChanges);
-            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
-            return employeesDto;
+            var employeesWithMetaData = await _repositoryManager.EmployeeRepository.GetEmployeesAsync(companyId,employeeParameters, trackChanges);
+            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesWithMetaData);
+            return (employeesDto, employeesWithMetaData.MetaData);
         }
 
         public async Task DeleteEmployeeForCompanyAsync(Guid companyId, Guid id, bool trackChanges)
