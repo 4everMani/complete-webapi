@@ -12,6 +12,6 @@ namespace Contracts
 
         ICompanyRepository CompanyRepository { get; }
 
-        void Save();
+        Task Save();
     }
 }

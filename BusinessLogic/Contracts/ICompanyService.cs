@@ -4,16 +4,18 @@ namespace BusinessLogic.Contracts
 {
     public interface ICompanyService
     {
-        IEnumerable<CompanyDto> GetAllCompanies(bool trackingChanges);
+        Task<IEnumerable<CompanyDto>> GetAllCompaniesAsync(bool trackingChanges);
 
-        CompanyDto GetCompany(Guid companyId, bool trackChanges);
+        Task<CompanyDto> GetCompanyAsync(Guid companyId, bool trackChanges);
 
-        CompanyDto CreateCompany(CompanyForCreationDto company);
+        Task<CompanyDto> CreateCompanyAsync(CompanyForCreationDto company);
 
-        IEnumerable<CompanyDto> GetByIds(IEnumerable<Guid> companyIds, bool trackChange);
+        Task<IEnumerable<CompanyDto>> GetByIdsAsync(IEnumerable<Guid> companyIds, bool trackChange);
 
-        (IEnumerable<CompanyDto> companies, string ids) CreateCompanyCollection(IEnumerable<CompanyForCreationDto> companyCollection);
+        Task<(IEnumerable<CompanyDto> companies, string ids)> CreateCompanyCollectionAsync(IEnumerable<CompanyForCreationDto> companyCollection);
 
-        void DeleteCompany(Guid companyId, bool trackChange);
+        Task DeleteCompanyAsync(Guid companyId, bool trackChange);
+
+        Task UpdateCompanyAsync(Guid companyId, CompanyForUpdateDto companyforUpdateDto, bool trackChanges);
     }
 }
