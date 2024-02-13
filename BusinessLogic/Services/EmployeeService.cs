@@ -47,12 +47,11 @@ namespace BusinessLogic.Services
 
         public async Task<(IEnumerable<EmployeeDto> employees, MetaData metaData)> GetEmployeesAsync(Guid companyId, EmployeeParameters employeeParameters, bool trackChanges)
         {
-            var company = await _repositoryManager.CompanyRepository.GetCompanyAsync(companyId, trackChanges);
-            if (company is null)
+            if (!employeeParameters.ValidAgerange)
             {
-                throw new CompanyNotFoundException(companyId);
+                throw new MaxAgeRangeBadRequestException();
             }
-
+            _ = await _repositoryManager.CompanyRepository.GetCompanyAsync(companyId, trackChanges) ?? throw new CompanyNotFoundException(companyId);
             var employeesWithMetaData = await _repositoryManager.EmployeeRepository.GetEmployeesAsync(companyId,employeeParameters, trackChanges);
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesWithMetaData);
             return (employeesDto, employeesWithMetaData.MetaData);
