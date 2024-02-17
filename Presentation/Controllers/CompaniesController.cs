@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contracts;
+﻿using Asp.Versioning;
+using BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Presentation.ActionFilters;
@@ -7,6 +8,7 @@ using Shared.DataTransferObjects;
 
 namespace Presentation.Controllers
 {
+    [ApiVersion("1.0")]
     [ApiController]
     [Route("api/companies")]
     public class CompaniesController : ControllerBase

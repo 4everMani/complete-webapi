@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contracts;
+﻿using Asp.Versioning;
+using BusinessLogic.Contracts;
 using BusinessLogic.Services;
 using CompanyEmployees.Configuration;
 using Contracts;
@@ -49,5 +50,20 @@ namespace CompanyEmployees.Extensions
         public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) =>
             builder.AddMvcOptions(config => config.OutputFormatters.Add(new
                  CsvOutputFormatter()));
+    
+        public static void ConfigureVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(opt =>
+            {
+                opt.ReportApiVersions = true; // adds api version to the response header
+                opt.AssumeDefaultVersionWhenUnspecified = true;
+                opt.DefaultApiVersion = new ApiVersion(1, 0);
+            })
+            .AddApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
+        }
     }
 }
